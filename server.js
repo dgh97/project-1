@@ -22,6 +22,10 @@ app.get('/login', (req, res) => {
     res.render('login.ejs');
 });
 
+app.get('/register', (req, res) => {
+    res.render('register.ejs');
+});
+
 app.post('/login', (req, res) => {
     const username = req.body.username;
     const password = req.body.password;

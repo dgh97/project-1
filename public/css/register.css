@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #725C3A; /* Background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(179, 183, 146, 0.9); /* Navbar background color with opacity */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Navbar Links */
+.navbar a {
+    color: #333; /* Navbar link color */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #D2AB80; /* Hover color for navbar links */
+}
+
+.navbar .brand {
+    font-size: 1.5em;
+    color: #725C3A; /* Brand color */
+}
+
+.navbar .auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #809671; /* Button background color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar .auth-buttons button:hover {
+    background-color: #725C3A; /* Darker color for hover */
+}
+
+/* Registration Form Styles */
+.register-container {
+    background-color: rgba(229, 210, 184, 0.9); /* Registration container background color with opacity */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 60px; /* Offset for the fixed navbar */
+}
+
+.register-form {
+    width: 100%;
+    text-align: center;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+    color: #333; /* Form header color */
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    background-color: #809671; /* Button background color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #725C3A; /* Darker color for hover */
+}
