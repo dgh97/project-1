@@ -3,22 +3,25 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     let valid = true;
 
-    // Validate username
-    const username = document.getElementById('username').value;
-    const usernameError = document.getElementById('usernameError');
-    if (username.trim() === '') {
-        usernameError.textContent = 'Username is required';
-        usernameError.style.display = 'block';
+    // Validate email
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
+    const emailError = document.getElementById('emailError');
+    if (email === '') {
+        emailError.textContent = 'Email is required';
+        emailError.style.display = 'block';
         valid = false;
     } else {
-        usernameError.textContent = '';
-        usernameError.style.display = 'none';
+        emailError.textContent = '';
+        emailError.style.display = 'none';
     }
+    emailInput.value = email; // Update input with trimmed value
 
     // Validate password
-    const password = document.getElementById('password').value;
+    const passwordInput = document.getElementById('password');
+    const password = passwordInput.value.trim();
     const passwordError = document.getElementById('passwordError');
-    if (password.trim() === '') {
+    if (password === '') {
         passwordError.textContent = 'Password is required';
         passwordError.style.display = 'block';
         valid = false;
@@ -26,11 +29,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         passwordError.textContent = '';
         passwordError.style.display = 'none';
     }
+    passwordInput.value = password; // Update input with trimmed value
 
     if (valid) {
-        // Form is valid, submit the form
-        alert('Form submitted successfully!');
-        // You can replace the alert with form submission logic
-        // document.getElementById('loginForm').submit();
+        document.getElementById('loginForm').submit();
     }
 });

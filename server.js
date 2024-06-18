@@ -27,11 +27,33 @@ app.get('/register', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-    const username = req.body.username;
-    const password = req.body.password;
-    console.log(username);
+    const { email, password} = req.body;
+    console.log(email);
     console.log(password);
-})
+    con.verifyLogin(email, password, function(err, result) {
+        if (err) {
+            return res.status(500);
+        } else {
+            res.render('landing.ejs');
+        }
+    });
+
+});
+
+app.post('/register', (req, res) => {
+    const { name, email, password, contact } = req.body;
+    con.registerAccount(name, email, password, contact, function(err, result) {
+        if (err) {
+            return res.status(500);
+        } else {
+            res.render('login.ejs');
+        }
+    });
+});
+
+
+
+
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}/`);
