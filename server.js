@@ -26,6 +26,10 @@ app.get('/register', (req, res) => {
     res.render('register.ejs');
 });
 
+app.get('/cart', (req, res) => {
+    res.render('cart.ejs');
+});
+
 app.post('/login', (req, res) => {
     const { email, password} = req.body;
     console.log(email);

@@ -53,6 +53,19 @@ body {
     background-color: #725C3A; /* Darker color for hover */
 }
 
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.cart-img {
+    width: 24px;
+    height: 24px;
+}
+
 /* Hero Section Styles */
 .hero {
     text-align: center;

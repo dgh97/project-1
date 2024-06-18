@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">Sprouts</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/#products">Products</a>
+            <a href="/#contact">Contact</a>
+        </div>
+        <div class="auth-buttons">
+            <button onclick="location.href='/login'">Login</button>
+            <button onclick="location.href='/register'">Register</button>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <h2>Your Cart</h2>
+            <div class="cart-item">
+                <img src="/img/productEx.webp" alt="Product Image">
+                <div class="item-details">
+                    <h3>Organic Honey</h3>
+                    <div class="quantity-controls">
+                        <button class="decrease-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increase-btn">+</button>
+                    </div>
+                    <p>Price: $10.99</p>
+                </div>
+                <button class="remove-btn">Remove</button>
+            </div>
+            <!-- Add more cart items as needed -->
+        </div>
+        <div class="bill-info">
+            <h2>Bill Details</h2>
+            <p>Subtotal: $10.99</p>
+            <p>Tax: $0.82</p>
+            <p>Total: $11.81</p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="/js/cart.js"></script>
+</body>
+</html>
